@@ -117,7 +117,6 @@ if __FILE__ == $0
   exit 1 unless pstuff.required_flags?
   if pstuff.opts[:ldap_group] != nil
     ldap_host = 'localhost'
-    #ldap_host = 'ldap.uchicago.edu'
     ldap_base = 'dc=example,dc=com'
     ldap_attrs = ['cn', 'hasMember']
     ldap_conn = LDAP::SSLConn.new(ldap_host, 636)
