@@ -1,0 +1,1 @@
+This finds all members of an ldap group and adds them as 'buddies' through the pidgin dbus interface.

@@ -61,7 +61,6 @@ class PidginStuff
 
   def get_ldap_group_members(conn, host, base, attrs)
 		filter = "(&(objectClass=groupOfUniqueNames)(cn=#{@opts[:ldap_group]}))"
-		#conn.bind(@username, @password) if bind
     lgroup_attrs = {}
 		conn.search(base, @@scope, filter, attrs) {|entry| lgroup_attrs = entry.to_hash}
     lgroup_attrs['hasMember']
